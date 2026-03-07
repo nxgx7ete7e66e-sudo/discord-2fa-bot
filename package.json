@@ -1,0 +1,35 @@
+{
+  "name": "discord-2fa-auth",
+  "version": "1.0.0",
+  "description": "Discord-powered 2FA authentication system",
+  "main": "discord-2fa-server.js",
+  "scripts": {
+    "start": "node discord-2fa-server.js",
+    "dev": "nodemon discord-2fa-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "2fa",
+    "authentication",
+    "2factor",
+    "auth",
+    "security"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^9.0.0",
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}
