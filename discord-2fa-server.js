@@ -80,6 +80,15 @@ discordClient.on('messageCreate', async (message) => {
   }
 });
 
+// Validate token before login
+if (!DISCORD_BOT_TOKEN || typeof DISCORD_BOT_TOKEN !== 'string' || DISCORD_BOT_TOKEN.length < 50) {
+  console.error('❌ ERROR: DISCORD_BOT_TOKEN is invalid!');
+  console.error('Token value:', DISCORD_BOT_TOKEN);
+  console.error('Token length:', DISCORD_BOT_TOKEN ? DISCORD_BOT_TOKEN.length : 'undefined');
+  process.exit(1);
+}
+
+console.log('✅ Token validated, attempting login...');
 discordClient.login(DISCORD_BOT_TOKEN);
 
 // ============ API ROUTES ============
